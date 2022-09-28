@@ -3,18 +3,13 @@ import readlineSync from 'readline-sync';
 console.log("Welcome to the Brain Games!");
 var userName = readlineSync.question("May I have your name? ");     
 console.log(`Hello, ${userName}!`);
-
 console.log ('Answer "yes" if the number is even, otherwise answer "no".')
-    
-
+let n = 0
 for (let i = 0; i < 3; i += 1) {
     let randomNumber = Math.floor(Math.random() * 101)
     var answer = readlineSync.question('Question: ' + randomNumber + ' ');
-    //let n = 0
     if ((randomNumber % 2 === 0 && answer === 'yes') || (randomNumber % 2 !== 0 && answer === 'no')) {
         console.log ('Correct!')
-        //n = n + 1 
-        
     } 
     else {
         if (answer === 'yes') {
@@ -25,6 +20,8 @@ for (let i = 0; i < 3; i += 1) {
             console.log ("'"+ answer +"' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again," + userName + "!") 
         break
         }
+        
     }
+    n += 1
+        if (n === 3) {console.log ('Congratulations, ' + userName + '!')}
 }
-console.log ('Congratulations, ' + userName + '!')
