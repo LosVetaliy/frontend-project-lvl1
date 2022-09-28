@@ -10,12 +10,13 @@ console.log ('Answer "yes" if the number is even, otherwise answer "no".')
 for (let i = 0; i < 3; i += 1) {
     let randomNumber = Math.floor(Math.random() * 101)
     var answer = readlineSync.question('Question: ' + randomNumber + ' ');
+    let n = 0
     if ((randomNumber % 2 === 0 && answer === 'yes') || (randomNumber % 2 !== 0 && answer === 'no')) {
         console.log ('Correct!')
-        let n = 0
-        n += 1
-        if (n = 3) {console.log ('Congratulations, ' + userName + '!')} 
-    } else {
+        n += 1 
+        if (n = 3) {console.log ('Congratulations, ' + userName + '!')}
+    } 
+    else {
         if (answer === 'yes') {
             console.log ("'"+ answer +"' is wrong answer ;(. Correct answer was 'no'.\nLet's try again," + userName + "!")
         break
@@ -25,4 +26,5 @@ for (let i = 0; i < 3; i += 1) {
         break
         }
     }
+    
 }
