@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import welcomeName from "../src/cli.js";
 
-const greetings = welcomeName();
+// eslint-disable-next-line import/extensions
+import welcomeName from '../src/cli.js';
+
+welcomeName();
