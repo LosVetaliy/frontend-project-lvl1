@@ -14,9 +14,9 @@ const gamePattern = (description, game) => {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
-    };
+    }
     console.log('Correct!');
-  };
+  }
   console.log(`Congratulations, ${userName}!`);
 };
 export default gamePattern;
