@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/extensions
 import gamePattern from '../index.js';
 
 const description = "Answer 'yes' if number even otherwise answer 'no'.";
@@ -8,7 +7,6 @@ const game = () => {
   const answer = isEven(number) ? 'yes' : 'no';
   return [number, answer];
 };
-const evenGame = () => {
+export default () => {
   gamePattern(description, game);
 };
-export default evenGame;

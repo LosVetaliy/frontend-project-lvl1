@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import gamePattern from '../index.js';
 
 const description = 'What number is missing in the progression?';
@@ -21,7 +20,6 @@ const game = () => {
   question[hiddenNumber] = '..';
   return [question.join(' '), String(answer)];
 };
-function progGame() {
+export default () => {
   gamePattern(description, game);
-}
-export default progGame;
+};

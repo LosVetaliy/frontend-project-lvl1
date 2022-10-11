@@ -5,8 +5,8 @@ const gamePattern = (description, game) => {
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}!`);
   console.log(description);
-
-  for (let i = 0; i < 3; i += 1) {
+  const roundsNumber = 3;
+  for (let i = 0; i < roundsNumber; i += 1) {
     const [question, trueAnswer] = game();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

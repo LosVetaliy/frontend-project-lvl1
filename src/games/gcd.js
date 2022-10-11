@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/extensions
 import gamePattern from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -6,10 +5,8 @@ const gcd = (number1, number2) => {
   if (number1 === 0) { return number2; }
   while (number2 !== 0) {
     if (number1 > number2) {
-      // eslint-disable-next-line no-param-reassign
       number1 -= number2;
     } else {
-      // eslint-disable-next-line no-param-reassign
       number2 -= number1;
     }
   }
@@ -22,7 +19,6 @@ const game = () => {
   const question = `${number1} ${number2}`;
   return [question, answer];
 };
-const gcdGame = () => {
+export default () => {
   gamePattern(description, game);
 };
-export default gcdGame;
