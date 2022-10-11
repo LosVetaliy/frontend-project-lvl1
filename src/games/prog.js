@@ -10,9 +10,9 @@ const getProgression = (startNumber, repeatNumber, stepNumber) => {
   return progression;
 };
 const game = () => {
-  const startNumber = getRandomArbitrary(1, 9);
+  const startNumber = getRandomArbitrary(1, 10);
   const repeatNumber = getRandomArbitrary(5, 10);
-  const stepNumber = getRandomArbitrary(2, 5);
+  const stepNumber = getRandomArbitrary(5, 10);
 
   const question = getProgression(startNumber, repeatNumber, stepNumber);
   const hiddenNumber = getRandomArbitrary(1, question.length - 1);

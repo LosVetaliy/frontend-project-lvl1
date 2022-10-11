@@ -11,7 +11,9 @@ const prime = (number) => {
   return true;
 };
 const game = () => {
-  const number = getRandomArbitrary(2, 40);
+  const minNumber = 2;
+  const maxNumber = 40;
+  const number = getRandomArbitrary(minNumber, maxNumber);
   const question = String(number);
   const answer = prime(number) ? 'yes' : 'no';
   return [number, answer];

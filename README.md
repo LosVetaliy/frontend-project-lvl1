@@ -3,8 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/4cd8cc1fb80bd3a8f25a/maintainability)](https://codeclimate.com/github/LosVetaliy/frontend-project-lvl1/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4cd8cc1fb80bd3a8f25a/test_coverage)](https://codeclimate.com/github/LosVetaliy/frontend-project-lvl1/test_coverage)
-
 ## The project is five mini math games: checking the parity of a number, mathematical operations, finding the greatest common divisor, finding a number from progression, checking the simplicity of a number. 3 tries - 1 chance to win.
 
 ## Setup, publish and run

@@ -1,9 +1,11 @@
 import gamePattern from '../index.js';
+import getRandomNumber from '../mathRandom.js';
 
-const description = "Answer 'yes' if number even otherwise answer 'no'.";
+const description = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = (number) => number % 2 === 0;
 const game = () => {
-  const number = Math.floor(Math.random() * 101);
+  const maxNumber = 101;
+  const number = getRandomNumber(maxNumber);
   const answer = isEven(number) ? 'yes' : 'no';
   return [number, answer];
 };
