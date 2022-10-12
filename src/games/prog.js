@@ -15,7 +15,7 @@ const game = () => {
   const stepNumber = getRandomNumber(5, 10);
 
   const question = getProgression(startNumber, repeatNumber, stepNumber);
-  const hiddenNumber = getRandomNumber(1, question.length - 1);
+  const hiddenNumber = getRandomNumber(question.length - 1);
   const answer = question[hiddenNumber];
   question[hiddenNumber] = '..';
   return [question.join(' '), String(answer)];
