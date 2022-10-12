@@ -1,7 +1,7 @@
 import gamePattern from '../index.js';
+import getRandomNumber from '../mathRandom.js';
 
 const description = 'What number is missing in the progression?';
-const getRandomArbitrary = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const getProgression = (startNumber, repeatNumber, stepNumber) => {
   const progression = [];
   for (let i = 0; i < repeatNumber; i += 1) {
@@ -10,12 +10,12 @@ const getProgression = (startNumber, repeatNumber, stepNumber) => {
   return progression;
 };
 const game = () => {
-  const startNumber = getRandomArbitrary(1, 10);
-  const repeatNumber = getRandomArbitrary(5, 10);
-  const stepNumber = getRandomArbitrary(5, 10);
+  const startNumber = getRandomNumber(1, 10);
+  const repeatNumber = getRandomNumber(5, 10);
+  const stepNumber = getRandomNumber(5, 10);
 
   const question = getProgression(startNumber, repeatNumber, stepNumber);
-  const hiddenNumber = getRandomArbitrary(1, question.length - 1);
+  const hiddenNumber = getRandomNumber(1, question.length - 1);
   const answer = question[hiddenNumber];
   question[hiddenNumber] = '..';
   return [question.join(' '), String(answer)];

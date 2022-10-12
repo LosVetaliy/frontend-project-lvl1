@@ -1,7 +1,7 @@
 import gamePattern from '../index.js';
+import getRandomNumber from '../mathRandom.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const getRandomArbitrary = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const prime = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
@@ -13,7 +13,7 @@ const prime = (number) => {
 const game = () => {
   const minNumber = 2;
   const maxNumber = 40;
-  const number = getRandomArbitrary(minNumber, maxNumber);
+  const number = getRandomNumber(minNumber, maxNumber);
   const answer = prime(number) ? 'yes' : 'no';
   return [number, answer];
 };
